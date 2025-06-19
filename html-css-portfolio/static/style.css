@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Logo (Left Side) */
+.logo {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 9px;
+    left: 20px;
+}
+
+/* Centering h1 */
+header h1 {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Navigation (Right Side) */
+nav {
+    position: absolute;
+    right: 20px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: block;
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: #333;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+    
+}
+
+/* Gallery Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 10px;
+    padding: 15px;
+    margin: auto;
+}
+
+.grid-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.grid-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* 📏 Media Query for Larger Screens */
+@media (min-width: 768px) {
+  
+
+    h1 {
+        flex-grow: 1;  /* Allows h1 to take available space */
+        text-align: center; /* Ensures the title is always centered */
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0;
+    }
+
+    /* Adjust Grid Layout for Larger Screens */
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    }
+
+    header {
+        padding: 35px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    section {
+        max-width: 800px;
+    }
+}
